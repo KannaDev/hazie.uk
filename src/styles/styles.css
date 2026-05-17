@@ -110,20 +110,3 @@ hr {
   border-color: #ffd1dc;
   border-style: solid;
 }
-
-/* Footer Link Placeholders */
-.footer-nav a:link {
-  /* Add link styles here */
-}
-
-.footer-nav a:visited {
-  /* Add clicked link styles here */
-}
-
-.footer-nav a:hover, .footer-nav a:focus {
-  /* Add link hover styles here */
-}
-
-.footer-nav a:active {
-  /* Add active clicked styles here */
-}
