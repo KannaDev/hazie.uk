@@ -1,0 +1,30 @@
+name: Deploy to Codeberg Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Codeberg Pages
+    runs-on: codeberg-small
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # pin@v6
+
+      - name: Setup Deno environment
+        uses: https://github.com/denoland/setup-deno@v2
+        with:
+          cache: true
+
+      - name: Build site
+        run: deno task build
+      - uses: https://codeberg.org/git-pages/action@v2
+        with:
+          site: "https://${{ forge.repository_owner }}.codeberg.page/hazie.uk"
+          token: ${{ forge.token }}
+          source: dist/
+      - name: Clear CDN cache
+        run: |
+          curl -X POST -H "Authorization: ${{ secrets.CACHE_TOKEN }}" ${{ secrets.CACHE_WEBHOOK_URL }} -v
