@@ -27,4 +27,4 @@ jobs:
           source: dist/
       - name: Clear CDN cache
         run: |
-          curl -X POST -H "Authorization: ${{ secrets.CACHE_TOKEN }}" ${{ secrets.CACHE_WEBHOOK_URL }} -v
+          curl -X POST -H "Authorization: ${{ secrets.CACHE_TOKEN }}" ${{ vars.CACHE_WEBHOOK_URL }} -v
