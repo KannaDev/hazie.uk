@@ -46,7 +46,7 @@ jobs:
         with:
           app_id: ${{ vars.APP_ID }}
           api_key: ${{ secrets.BUNNYNET_API_KEY }}
-          container: hazie-uk
+          container: hazie.uk
           image_tag: "${{ github.sha }}"
 
   clear-cache:
@@ -57,4 +57,4 @@ jobs:
       - name: Clear CDN cache
         run: |
           sleep 90
-          curl -X POST -H "Authorization: ${{ secrets.BUNNYNET_API_KEY }}" https://api.bunny.net/pullzone/5868902/purgeCache
+          curl -X POST -H "Authorization: ${{ secrets.BUNNYNET_API_KEY }}" https://api.bunny.net/pullzone/6014008/purgeCache
