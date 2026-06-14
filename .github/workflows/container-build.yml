@@ -57,4 +57,4 @@ jobs:
       - name: Clear CDN cache
         run: |
           sleep 90
-          curl -X POST -H "Authorization: ${{ secrets.BUNNYNET_API_KEY }}" https://api.bunny.net/pullzone/6008527/purgeCache
+          curl -X POST -H "Authorization: ${{ secrets.BUNNYNET_API_KEY }}" https://api.bunny.net/pullzone/5868902/purgeCache
