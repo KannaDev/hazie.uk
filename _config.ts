@@ -1,10 +1,10 @@
 import lume from "lume/mod.ts";
 import attributes from "lume/plugins/attributes.ts";
-import date from "lume/plugins/date.ts";
-import code_highlight from "lume/plugins/code_highlight.ts";
 import base_path from "lume/plugins/base_path.ts";
-import check_urls from "lume/plugins/check_urls.ts";
 import brotli from "lume/plugins/brotli.ts";
+import check_urls from "lume/plugins/check_urls.ts";
+import code_highlight from "lume/plugins/code_highlight.ts";
+import date from "lume/plugins/date.ts";
 import mdx from "lume/plugins/mdx.ts";
 
 const site = lume({

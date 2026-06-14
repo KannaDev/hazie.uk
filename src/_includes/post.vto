@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles/blog.css" />
+  </head>
+  <body>
+    <a href="/blog">← Back to blog</a>
+    <h1>{{ title }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ date }}">{{
+          date.toLocaleDateString("en-GB", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }} {{
+          date.toLocaleTimeString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit",
+          })
+        }}</time>
+    </p>
+    {{ content }}
+    <hr />
+    <footer>
+      {{ comp.footer() }}
+    </footer>
+  </body>
+</html>
