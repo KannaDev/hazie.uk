@@ -46,7 +46,7 @@ jobs:
         with:
           app_id: ${{ vars.APP_ID }}
           api_key: ${{ secrets.BUNNYNET_API_KEY }}
-          container: caddy
+          container: hazie-uk
           image_tag: "${{ github.sha }}"
 
   clear-cache:
